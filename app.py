@@ -41,7 +41,7 @@ def load_lookup_table():
     workbook.close()
 
 
-def encode(text):
+def decode(text):
     words = text.split()
     translated_words = []
 
@@ -60,7 +60,7 @@ def encode(text):
     return " ".join(translated_words)
 
 
-def decode(text):
+def encode(text):
     words = text.split()
     translated_words = []
     for word in words:
