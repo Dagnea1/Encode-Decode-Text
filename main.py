@@ -9,7 +9,7 @@ if 'output' not in st.session_state:
     st.session_state["output"] = ""
 
 # UI
-st.title("Encode/Decode Text")
+st.title("WordGame")
 input_text = st.text_area("Enter Input Text:")
 
 columns = st.columns([1] * 7)

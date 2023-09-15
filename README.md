@@ -4,7 +4,7 @@
 `pip3 install -r requirements.txt`
 
 #### To Run the CLI
-`python3 main.py`
+`python3 app.py`
 
 #### To Run the webserver
-` streamlit run main.py`
+`python3 -m streamlit run main.py`
