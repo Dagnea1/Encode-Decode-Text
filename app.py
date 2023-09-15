@@ -53,8 +53,9 @@ def decode(text):
                 translated_chars.append(str(trans_char))
             else:
                 for c in char:
-                    trans_char = ENCODE_LOOKUP.get(c, c)
-                    translated_chars.append(str(trans_char))
+                    if c != "/":
+                        trans_char = ENCODE_LOOKUP.get(c, c)
+                        translated_chars.append(str(trans_char))
         translated_words.append("".join(translated_chars))
 
     return " ".join(translated_words)
@@ -69,7 +70,7 @@ def encode(text):
             trans_char = DECODE_LOOKUP.get(char, char)
             translated_chars.append(str(trans_char))
         translated_words.append("".join(translated_chars))
-    return " ".join(translated_words)
+    return " / ".join(translated_words)
 
 
 def start():
